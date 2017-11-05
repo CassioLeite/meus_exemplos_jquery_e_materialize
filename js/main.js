@@ -18,6 +18,7 @@ botao.on("click", function(){
 	var corpoElemento = $(".mostra-usuarios").find("ul");
 	var linha = montaUsuario(nome, sobrenome, email, idade);
 	corpoElemento.append(linha);
+
 });
 
 function montaUsuario(nome, sobrenome, email, idade){
@@ -30,6 +31,7 @@ function montaUsuario(nome, sobrenome, email, idade){
 	var textoIdade = $("<p>").text("Idade: " + idade);
 	var textoEmail = $("<p>").text("Email: " + email);
 
+	//implementar o botao de excluir no collapsible
 	corpoItem.append(textoIdade);
 	corpoItem.append(textoEmail);
 
