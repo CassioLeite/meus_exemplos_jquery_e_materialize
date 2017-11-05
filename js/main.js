@@ -26,6 +26,9 @@ function montaUsuario(nome, sobrenome, email, idade){
 	var cabecalhoItem = $("<div>").addClass("collapsible-header");
 	var iconeCabecalhoUsuario = $("<i>").addClass("material-icons").text("person");
 	var nomeCabecalhoUsuario = $("<span>").text(nome + " " + sobrenome);
+	var elementoExcluir = $("<span>").addClass("badge");
+	var linkExcluir = $("<a>").attr("href", "#").addClass("botao-excluir");
+	var iconeExcluirUsuario = $("<i>").addClass("material-icons").text("delete");
 
 	var corpoItem = $("<div>").addClass("collapsible-body");
 	var textoIdade = $("<p>").text("Idade: " + idade);
@@ -37,6 +40,11 @@ function montaUsuario(nome, sobrenome, email, idade){
 
 	cabecalhoItem.append(iconeCabecalhoUsuario);
 	cabecalhoItem.append(nomeCabecalhoUsuario);
+
+	cabecalhoItem.append(elementoExcluir);
+	elementoExcluir.append(linkExcluir);
+	linkExcluir.append(iconeExcluirUsuario);
+
 	item.append(cabecalhoItem);
 	item.append(corpoItem);
 
