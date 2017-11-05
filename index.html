@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Montador de Elementos HTML</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="css/libs/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+	<nav>
+		<div class="nav-wrapper teal darken-1">
+			<a href="#" class="brand-logo">InterativeHTML</a>
+		</div>
+	</nav>
+	<div class="container">
+		<h1 class="center">Cadastro de Usuários</h1>
+		<div class="row">
+			<form class="col s12">
+				<div class="row">
+					<div class="input-fild col s6">
+						<label for="primeiro-nome-usuario">Nome</label>
+						<input id="primeiro-nome-usuario" type="text" name="validate" placeholder="Informe seu primeiro nome">
+					</div>
+					<div class="input-fild col s6">
+						<label for="ultimo-nome-usuario">Sobrenome</label>
+						<input id="ultimo-nome-usuario" type="text" name="validate" placeholder="Informe seu ultimo nome">
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-fild col s9">
+						<label for="email-usuario">Email</label>
+						<input id="email-usuario" type="text" name="validate" placeholder="Informe seu email">
+					</div>
+					<div class="input-fild col s3">
+						<label for="idade-usuario">Idade</label>
+						<input id="idade-usuario" type="text" name="validade" placeholder="Informe sua idade">
+					</div>
+				</div>
+
+				<div class="row botao-padding-ajustado" id="botao-enviar">
+					<div class="btn waves-effect teal darken-1 col s12">
+						<a class="white-text">Enviar</a>
+					</div>
+				</div>
+			</form>				
+		</div>
+		<section class="mostra-usuarios">
+			<ul class="collapsible" data-collapsible="accordion">
+				<li>
+					<div class="collapsible-header">
+						<i class="material-icons">person</i><span>Cássio Leite</span>
+					</div>
+					<div class="collapsible-body">
+						<p>Idade: 26</p>
+						<p>Email: cassiodegoes@live.com</p>
+					</div>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="css/libs/materialize.min.js"></script>
+</body>
+</html>
