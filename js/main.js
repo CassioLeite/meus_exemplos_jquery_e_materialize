@@ -8,6 +8,7 @@ function limpaInformacoesUsuario(){
 }
 
 botao.on("click", function(){
+	$(".mostra-usuarios").css("visibility", "visible");
 
 	var nome = $("#primeiro-nome-usuario").val();
 	var sobrenome = $("#ultimo-nome-usuario").val();
@@ -15,13 +16,16 @@ botao.on("click", function(){
 	var idade = $("#idade-usuario").val();
 
 	limpaInformacoesUsuario();
-	var corpoElemento = $(".mostra-usuarios").find("ul");
+
+	var lista = $(".mostra-usuarios").find("ul");
 	var linha = montaUsuario(nome, sobrenome, email, idade);
-	corpoElemento.append(linha);
+	lista.append(linha);
 
 });
 
+
 function montaUsuario(nome, sobrenome, email, idade){
+
 	var item = $("<li>");
 	var cabecalhoItem = $("<div>").addClass("collapsible-header");
 	var iconeCabecalhoUsuario = $("<i>").addClass("material-icons").text("person");
@@ -49,4 +53,5 @@ function montaUsuario(nome, sobrenome, email, idade){
 	item.append(corpoItem);
 
 	return item;
+		
 }
