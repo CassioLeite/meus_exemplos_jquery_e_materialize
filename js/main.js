@@ -1,11 +1,15 @@
 var botao = $("#botao-enviar");
 
+
 function limpaInformacoesUsuario(){
 	$("#primeiro-nome-usuario").val("");
 	$("#ultimo-nome-usuario").val("");
 	$("#email-usuario").val("");
 	$("#idade-usuario").val("");
 }
+
+$(".botao-excluir").click(excluirUsuario);
+//botaoExcluirUsuario.click(excluirUsuario);
 
 botao.on("click", function(){
 	$(".mostra-usuarios").css("visibility", "visible");
@@ -26,7 +30,7 @@ botao.on("click", function(){
 
 function montaUsuario(nome, sobrenome, email, idade){
 
-	var item = $("<li>");
+	var item = $("<li>").addClass("usuario");
 	var cabecalhoItem = $("<div>").addClass("collapsible-header");
 	var iconeCabecalhoUsuario = $("<i>").addClass("material-icons").text("person");
 	var nomeCabecalhoUsuario = $("<span>").text(nome + " " + sobrenome);
@@ -45,7 +49,7 @@ function montaUsuario(nome, sobrenome, email, idade){
 	cabecalhoItem.append(iconeCabecalhoUsuario);
 	cabecalhoItem.append(nomeCabecalhoUsuario);
 
-	cabecalhoItem.append(elementoExcluir);
+	cabecalhoItem.append(elementoExcluir); //Teste apenas
 	elementoExcluir.append(linkExcluir);
 	linkExcluir.append(iconeExcluirUsuario);
 
@@ -54,4 +58,9 @@ function montaUsuario(nome, sobrenome, email, idade){
 
 	return item;
 		
+}
+
+function excluirUsuario(){
+	event.preventDefault();
+	$(this).parent().parent().parent().remove();
 }
